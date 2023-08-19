@@ -1,4 +1,4 @@
-const siteConfig = {
+export const siteConfig = {
 	title: "CodeX MIT-BLR",
 	headerTitle: "CodeX",
 	description: "The website for CodeX, a club by the students of MIT Bengaluru.",
@@ -12,11 +12,9 @@ const siteConfig = {
 	navLinks: [
 		{ href: "/events", title: "Events" },
 		{ href: "/blog", title: "Blog" },
-		{ href: "/team", title: "About Us" },
+		{ href: "/about", title: "About" },
 	],
 
 	github: "https://github.com/",
 	twitter: "https://twitter.com/CodeX_MITB",
-}
-
-module.exports = siteConfig
+};
