@@ -15,7 +15,7 @@
 	</footer>
 </div>
 
-<style>
+<style lang='postcss'>
 	.app {
 		display: flex;
 		flex-direction: column;
@@ -27,6 +27,7 @@
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
+		padding-top: 84px;
 		width: 100%;
 		max-width: 64rem;
 		margin: 0 auto;
