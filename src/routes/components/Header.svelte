@@ -46,7 +46,7 @@
 			</svg>
 		</a>
 		<button
-			class='md:hidden inline-flex justify-end p-4 transition duration-150 hover:bg-white hover:bg-opacity-10 rounded text-white outline-none'
+			class='md:hidden inline-flex p-4 transition duration-150 hover:bg-white hover:bg-opacity-10 rounded text-white outline-none'
 			on:click={toggleMenu}
 		>
 		<svg
@@ -80,10 +80,6 @@
 			</div>
 		</div>
 	</nav>
-
-	<div class='flex md:hidden -bottom-full w-full h-[100vh] '>
-
-	</div>
 </header>
 
 <style lang='postcss'>
