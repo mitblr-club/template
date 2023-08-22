@@ -7,13 +7,13 @@
 
 	let menuOpen = false;
 	let navTop = false;
-     
-    function toggleMenu() {
-    	menuOpen = !menuOpen;
-    }
 
-  	onMount(() => {
-    	const navbar = document.querySelector('nav');
+	function toggleMenu() {
+		menuOpen = !menuOpen;
+	}
+
+	onMount(() => {
+		const navbar = document.querySelector('nav');
 
 		if (navbar) {
 			const handleScroll = () => {
@@ -30,49 +30,72 @@
 				window.removeEventListener('scroll', handleScroll);
 			};
 		}
-  	});
+	});
 </script>
 
-
 <header>
-	<nav class='fixed md:flex {navTop ? 'header-top' : 'header-on-scroll'} -top-1 left-0 right-0 z-[101] justify-center p-2 transition-colors duration-200'>
-		<a href='/' aria-label={siteConfig.headerTitle} class='inline-flex items-center p-1 px-3 mr-4 transition duration-150 hover:opacity-70'>
-			<svg version='1.0' width='48' height='48' viewBox='0 0 900 900' preserveAspectRatio='xMinYMin' xmlns='http://www.w3.org/2000/svg'>
+	<nav
+		class="fixed md:flex {navTop
+			? 'header-top'
+			: 'header-on-scroll'} -top-1 left-0 right-0 z-[101] justify-center p-2 transition-colors duration-200"
+	>
+		<a
+			href="/"
+			aria-label={siteConfig.headerTitle}
+			class="mr-4 inline-flex items-center p-1 px-3 transition duration-150 hover:opacity-70"
+		>
+			<svg
+				version="1.0"
+				width="48"
+				height="48"
+				viewBox="0 0 900 900"
+				preserveAspectRatio="xMinYMin"
+				xmlns="http://www.w3.org/2000/svg"
+			>
 				<title>CodeX Logo</title>
-				<g transform='matrix(0.1, 0, 0, -0.1, -911.100037, 1707.999878)' fill={navTop ? '#000' : '#fff'} stroke='none'>
-					<path d='M16020 16077 c0 -6 -701 -2091 -704 -2094 -2 -2 -83 193 -181 434 -97 241 -229 565 -293 721 l-115 284 -320 160 -320 160 -441 -17 c-243 -9 -443 -18 -445 -20 -2 -3 328 -821 733 -1820 405 -998 736 -1819 736 -1825 0 -9 -500 -1507 -785 -2352 l-64 -188 278 0 278 0 299 889 c164 490 301 888 304 886 3 -2 163 -391 355 -865 l349 -862 318 -159 317 -159 433 11 c238 6 441 14 450 17 15 6 -27 115 -308 807 -178 440 -538 1327 -800 1970 l-475 1170 476 1418 c261 780 475 1423 475 1428 0 5 -112 9 -275 9 -151 0 -275 -1 -275 -3z m-1473 -1612 c270 -665 505 -1239 521 -1275 27 -61 187 -455 375 -925 46 -115 303 -749 571 -1408 268 -660 486 -1200 484 -1202 -9 -9 -773 -24 -781 -16 -9 9 -179 425 -875 2136 -796 1959 -1572 3878 -1569 3881 6 7 465 21 627 20 l155 -1 492 -1210z' />
-					<path d='M10326 15053 l-375 -398 0 -1910 0 -1910 376 -397 376 -398 907 0 907 0 376 398 376 397 0 453 1 452 -290 0 -290 0 0 -306 0 -306 -232 -234 -232 -234 -620 1 -621 0 -182 189 -183 189 0 1708 0 1708 188 188 187 187 621 0 621 0 227 -234 226 -234 0 -306 0 -306 290 0 290 0 0 453 0 452 -376 398 -375 397 -909 0 -908 0 -376 -397z' />
+				<g
+					transform="matrix(0.1, 0, 0, -0.1, -911.100037, 1707.999878)"
+					fill={navTop ? '#000' : '#fff'}
+					stroke="none"
+				>
+					<path
+						d="M16020 16077 c0 -6 -701 -2091 -704 -2094 -2 -2 -83 193 -181 434 -97 241 -229 565 -293 721 l-115 284 -320 160 -320 160 -441 -17 c-243 -9 -443 -18 -445 -20 -2 -3 328 -821 733 -1820 405 -998 736 -1819 736 -1825 0 -9 -500 -1507 -785 -2352 l-64 -188 278 0 278 0 299 889 c164 490 301 888 304 886 3 -2 163 -391 355 -865 l349 -862 318 -159 317 -159 433 11 c238 6 441 14 450 17 15 6 -27 115 -308 807 -178 440 -538 1327 -800 1970 l-475 1170 476 1418 c261 780 475 1423 475 1428 0 5 -112 9 -275 9 -151 0 -275 -1 -275 -3z m-1473 -1612 c270 -665 505 -1239 521 -1275 27 -61 187 -455 375 -925 46 -115 303 -749 571 -1408 268 -660 486 -1200 484 -1202 -9 -9 -773 -24 -781 -16 -9 9 -179 425 -875 2136 -796 1959 -1572 3878 -1569 3881 6 7 465 21 627 20 l155 -1 492 -1210z"
+					/>
+					<path
+						d="M10326 15053 l-375 -398 0 -1910 0 -1910 376 -397 376 -398 907 0 907 0 376 398 376 397 0 453 1 452 -290 0 -290 0 0 -306 0 -306 -232 -234 -232 -234 -620 1 -621 0 -182 189 -183 189 0 1708 0 1708 188 188 187 187 621 0 621 0 227 -234 226 -234 0 -306 0 -306 290 0 290 0 0 453 0 452 -376 398 -375 397 -909 0 -908 0 -376 -397z"
+					/>
 				</g>
 			</svg>
 		</a>
 		<button
-			class='md:hidden inline-flex p-4 transition duration-150 hover:bg-white hover:bg-opacity-10 rounded text-white outline-none'
+			class="inline-flex rounded p-4 text-white outline-none transition duration-150 hover:bg-white hover:bg-opacity-10 md:hidden"
 			on:click={toggleMenu}
 		>
-		<svg
-			class='w-6 h-6'
-			fill='none'
-			stroke='currentColor'
-			viewBox='0 0 24 24'
-			xmlns='http://www.w3.org/2000/svg'
-		>
-			<path
-			stroke-linecap='round'
-			stroke-linejoin='round'
-			stroke-width={2}
-			d='M4 6h16M4 12h16M4 18h16'
-			/>
-		</svg>
+			<svg
+				class="h-6 w-6"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width={2}
+					d="M4 6h16M4 12h16M4 18h16"
+				/>
+			</svg>
 		</button>
-		<div class='{
-			menuOpen ? '' : 'hidden'
-			  } w-full md:inline-flex md:flex-grow md:w-auto'			
-		>
-			<div class='md:inline-flex md:flex-row md:ml-auto md:w-auto w-full md:items-center items-start flex flex-col md:h-auto'>
+		<div class="{menuOpen ? '' : 'hidden'} w-full md:inline-flex md:w-auto md:flex-grow">
+			<div
+				class="flex w-full flex-col items-start md:ml-auto md:inline-flex md:h-auto md:w-auto md:flex-row md:items-center"
+			>
 				{#each siteConfig.navLinks as link}
 					<a
 						href={link.href}
-						class='md:inline-flex md:w-auto w-full px-3 py-2 rounded {navTop ? 'text-black' : 'text-white'} font-bold items-center justify-center transition duration-150 hover:opacity-75'
+						class="w-full rounded px-3 py-2 md:inline-flex md:w-auto {navTop
+							? 'text-black'
+							: 'text-white'} items-center justify-center font-bold transition duration-150 hover:opacity-75"
 					>
 						{link.title}
 					</a>
@@ -82,12 +105,12 @@
 	</nav>
 </header>
 
-<style lang='postcss'>
-		.header-top {
-			@apply bg-white;
-		}
+<style lang="postcss">
+	.header-top {
+		@apply bg-white;
+	}
 
-		.header-on-scroll {
-			@apply border-gray-700 bg-green-800 bg-opacity-80 shadow-lg backdrop-saturate-[1.8] backdrop-blur-[3px];
-		}
+	.header-on-scroll {
+		@apply border-gray-700 bg-green-800 bg-opacity-80 shadow-lg backdrop-blur-[3px] backdrop-saturate-[1.8];
+	}
 </style>

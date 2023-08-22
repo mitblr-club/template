@@ -1,14 +1,10 @@
 <footer>
 	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	<div>
-
-	</div>
-	<div>
-		
-	</div>
+	<div></div>
+	<div></div>
 </footer>
 
-<style lang='postcss'>
+<style lang="postcss">
 	footer {
 		display: flex;
 		flex-direction: column;
