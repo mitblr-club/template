@@ -1,15 +1,15 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
+	import { AppBar, drawerStore } from '@skeletonlabs/skeleton';
 	import { siteConfig } from '$lib/site.config';
+	import ThemeSwitcher from './ThemeSwitcher.svelte';
 
-	let menuOpen = false;
-	let navTop = false;
+	let navTop = true;
 
-	function toggleMenu() {
-		menuOpen = !menuOpen;
+	function drawerOpen(): void {
+		drawerStore.open();
 	}
 
 	onMount(() => {
@@ -33,16 +33,18 @@
 	});
 </script>
 
-<header>
-	<nav
-		class="fixed md:flex {navTop
-			? 'header-top'
-			: 'header-on-scroll'} -top-1 left-0 right-0 z-[101] justify-center p-2 transition-colors duration-200"
-	>
+<AppBar
+	padding="px-4 py-3"
+	gridColumns="grid-cols-3"
+	slotDefault="place-self-center"
+	slotTrail="place-content-end"
+	class={navTop ? 'header-top' : 'header-transparent'}
+>
+	<svelte:fragment slot="lead">
 		<a
 			href="/"
 			aria-label={siteConfig.headerTitle}
-			class="mr-4 inline-flex items-center p-1 px-3 transition duration-150 hover:opacity-70"
+			class="transition duration-150 hover:opacity-70"
 		>
 			<svg
 				version="1.0"
@@ -55,7 +57,7 @@
 				<title>CodeX Logo</title>
 				<g
 					transform="matrix(0.1, 0, 0, -0.1, -911.100037, 1707.999878)"
-					fill={navTop ? '#000' : '#fff'}
+					class="fill-black dark:fill-white"
 					stroke="none"
 				>
 					<path
@@ -67,43 +69,30 @@
 				</g>
 			</svg>
 		</a>
-		<button
-			class="inline-flex rounded p-4 text-white outline-none transition duration-150 hover:bg-white hover:bg-opacity-10 md:hidden"
-			on:click={toggleMenu}
-		>
-			<svg
-				class="h-6 w-6"
-				fill="none"
-				stroke="currentColor"
-				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg"
+	</svelte:fragment>
+	<div class="hidden md:flex">
+		{#each siteConfig.navLinks as link}
+			<a
+				href={link.href}
+				class="rounded px-2.5 text-lg font-bold transition duration-150 hover:opacity-75"
 			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width={2}
-					d="M4 6h16M4 12h16M4 18h16"
-				/>
-			</svg>
+				{link.title}
+			</a>
+		{/each}
+	</div>
+	<svelte:fragment slot="trail">
+		<ThemeSwitcher />
+		<button class="btn btn-sm mr-4 md:hidden" on:click={drawerOpen}>
+			<span>
+				<svg viewBox="0 0 100 80" class="h-4 w-4 fill-gray-700 dark:fill-gray-400">
+					<rect width="100" height="20" />
+					<rect y="30" width="100" height="20" />
+					<rect y="60" width="100" height="20" />
+				</svg>
+			</span>
 		</button>
-		<div class="{menuOpen ? '' : 'hidden'} w-full md:inline-flex md:w-auto md:flex-grow">
-			<div
-				class="flex w-full flex-col items-start md:ml-auto md:inline-flex md:h-auto md:w-auto md:flex-row md:items-center"
-			>
-				{#each siteConfig.navLinks as link}
-					<a
-						href={link.href}
-						class="w-full rounded px-3 py-2 md:inline-flex md:w-auto {navTop
-							? 'text-black'
-							: 'text-white'} items-center justify-center font-bold transition duration-150 hover:opacity-75"
-					>
-						{link.title}
-					</a>
-				{/each}
-			</div>
-		</div>
-	</nav>
-</header>
+	</svelte:fragment>
+</AppBar>
 
 <style lang="postcss">
 	.header-top {
@@ -111,6 +100,6 @@
 	}
 
 	.header-on-scroll {
-		@apply border-gray-700 bg-green-800 bg-opacity-80 shadow-lg backdrop-blur-[3px] backdrop-saturate-[1.8];
+		@apply border-gray-700 bg-green-800 bg-opacity-80 shadow-lg backdrop-blur-[3px] backdrop-saturate-[1.8] dark:bg-gray-800;
 	}
 </style>

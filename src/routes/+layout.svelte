@@ -1,35 +1,21 @@
-<script>
-	import '../app.css';
-	import Header from './components/Header.svelte';
-	import Footer from './components/Footer.svelte';
+<script lang="ts">
+	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
+	import '@skeletonlabs/skeleton/styles/skeleton.css';
+	import '../app.postcss';
+	import { AppShell } from '@skeletonlabs/skeleton';
+	import NavBar from '$components/NavBar.svelte';
+	import NavDrawer from '$components/NavDrawer.svelte';
+	import Footer from '$components/Footer.svelte';
 </script>
 
-<div class="app">
-	<Header />
-
-	<main>
+<AppShell>
+	<svelte:fragment slot="header">
+		<NavBar />
+	</svelte:fragment>
+	<NavDrawer />
+	<svelte:fragment slot="sidebarLeft"></svelte:fragment>
+	<div class="container mx-auto p-10">
 		<slot />
-	</main>
-
-	<Footer />
-</div>
-
-<style lang='postcss'>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		padding-top: 84px;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-</style>
+	</div>
+	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
+</AppShell>
