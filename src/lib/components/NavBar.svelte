@@ -1,36 +1,11 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import logo from '$lib/images/svelte-logo.svg';
-	import github from '$lib/images/github.svg';
 	import { AppBar, drawerStore } from '@skeletonlabs/skeleton';
 	import { siteConfig } from '$lib/site.config';
 	import ThemeSwitcher from './ThemeSwitcher.svelte';
 
-	let navTop = true;
-
 	function drawerOpen(): void {
 		drawerStore.open();
 	}
-
-	onMount(() => {
-		const navbar = document.querySelector('nav');
-
-		if (navbar) {
-			const handleScroll = () => {
-				if (window.scrollY > 10) {
-					navTop = false;
-				} else {
-					navTop = true;
-				}
-			};
-
-			window.addEventListener('scroll', handleScroll);
-
-			return () => {
-				window.removeEventListener('scroll', handleScroll);
-			};
-		}
-	});
 </script>
 
 <AppBar
@@ -38,7 +13,8 @@
 	gridColumns="grid-cols-3"
 	slotDefault="place-self-center"
 	slotTrail="place-content-end"
-	class={navTop ? 'header-top' : 'header-transparent'}
+	background="bg-transparent"
+	shadow="shadow-md"
 >
 	<svelte:fragment slot="lead">
 		<a
@@ -93,13 +69,3 @@
 		</button>
 	</svelte:fragment>
 </AppBar>
-
-<style lang="postcss">
-	.header-top {
-		@apply bg-white;
-	}
-
-	.header-on-scroll {
-		@apply border-gray-700 bg-green-800 bg-opacity-80 shadow-lg backdrop-blur-[3px] backdrop-saturate-[1.8] dark:bg-gray-800;
-	}
-</style>

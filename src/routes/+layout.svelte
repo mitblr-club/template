@@ -6,10 +6,35 @@
 	import NavBar from '$components/NavBar.svelte';
 	import NavDrawer from '$components/NavDrawer.svelte';
 	import Footer from '$components/Footer.svelte';
+
+	import type { ComponentEvents } from 'svelte';
+
+	let navTop = true;
+
+	const handleScroll = () => {
+		if (window.scrollY > 72) {
+			navTop = false;
+		} else {
+			navTop = true;
+		}
+		console.log(navTop);
+	};
+
+	function scrollHandler(event: ComponentEvents<AppShell>['scroll']) {
+		event.currentTarget?.addEventListener('scroll', handleScroll);
+
+		return () => {
+			event.currentTarget?.removeEventListener('scroll', handleScroll);
+		};
+	}
 </script>
 
-<AppShell>
-	<svelte:fragment slot="header">
+<AppShell
+	regionPage="relative"
+	slotPageHeader="sticky top-0 z-10 bg-opacity-60 backdrop-blur-[5px] backdrop-saturate-[1]"
+	on:scroll={scrollHandler}
+>
+	<svelte:fragment slot="pageHeader">
 		<NavBar />
 	</svelte:fragment>
 	<NavDrawer />
