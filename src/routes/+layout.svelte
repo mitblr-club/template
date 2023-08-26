@@ -11,27 +11,16 @@
 
 	let navTop = true;
 
-	const handleScroll = () => {
-		if (window.scrollY > 72) {
-			navTop = false;
-		} else {
-			navTop = true;
-		}
-		console.log(navTop);
-	};
-
 	function scrollHandler(event: ComponentEvents<AppShell>['scroll']) {
-		event.currentTarget?.addEventListener('scroll', handleScroll);
-
-		return () => {
-			event.currentTarget?.removeEventListener('scroll', handleScroll);
-		};
+		navTop = event.currentTarget.scrollTop === 0;
 	}
 </script>
 
 <AppShell
 	regionPage="relative"
-	slotPageHeader="sticky top-0 z-10 bg-opacity-60 backdrop-blur-[5px] backdrop-saturate-[1]"
+	slotPageHeader="sticky top-0 z-10 transition-colors transition-shadow duration-200 {navTop
+		? ''
+		: 'bg-opacity-60 shadow-md backdrop-blur-[5px] backdrop-saturate-[1]'}"
 	on:scroll={scrollHandler}
 >
 	<svelte:fragment slot="pageHeader">

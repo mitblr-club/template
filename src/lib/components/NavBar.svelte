@@ -14,7 +14,6 @@
 	slotDefault="place-self-center"
 	slotTrail="place-content-end"
 	background="bg-transparent"
-	shadow="shadow-md"
 >
 	<svelte:fragment slot="lead">
 		<a
