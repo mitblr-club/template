@@ -1,7 +1,5 @@
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	<div></div>
-	<div></div>
+	<p>built using <a href="https://kit.svelte.dev">kit.svelte.dev</a></p>
 </footer>
 
 <style lang="postcss">
@@ -10,7 +8,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 12px;
+		padding: 1.8rem;
 	}
 
 	footer a {
