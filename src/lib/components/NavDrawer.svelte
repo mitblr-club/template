@@ -10,7 +10,7 @@
 <Drawer
 	position="right"
 	blur="backdrop-blur-[5px]"
-	bgDrawer="bg-surface-100 bg-opacity-80"
+	bgDrawer="bg-surface-100 bg-opacity-80 dark:bg-surface-800 dark:bg-opacity-90"
 	bgBackdrop="backdrop-saturate-[1]"
 >
 	<div class="container m-auto items-center px-3 py-4">
