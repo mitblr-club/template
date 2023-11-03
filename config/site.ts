@@ -12,6 +12,8 @@ export const siteConfig = {
   ],
   links: {
     instagram:"https://www.instagram.com/codex.mitb/",
-    linkedin: "https://in.linkedin.com/company/codexclub"
+    linkedin: "https://in.linkedin.com/company/codexclub",
+    github:"https://github.com/CodeX-MIT-BLR",
+    twitter:"https://twitter.com/CodeX_MITB"
   },
 }

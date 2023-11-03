@@ -9,6 +9,7 @@ import {
 
 import { Icons } from "./icons";
 import Link from "next/link";
+import IconList from "./iconlist";
 
 const SiteSheet = () => {
     return(
@@ -65,6 +66,10 @@ const SiteSheet = () => {
                             <Link href="/blog"><button className="font-bold text-4xl text-gray-900 dark:text-slate-200">Blog</button></Link>
                         </SheetClose>
 
+                    </div>
+
+                    <div className="mt-24">
+                        <IconList />
                     </div>
 
                 </div>
