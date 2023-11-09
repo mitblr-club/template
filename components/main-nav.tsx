@@ -59,7 +59,7 @@ export function MainNav() {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center justify-center text-sm font-medium text-muted-foreground xs:hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex",
+                    "flex items-center justify-center text-sm font-medium text-muted-foreground xs:hidden lg:flex",
                     item.disabled && "cursor-not-allowed opacity-80"
                   )}
                 >

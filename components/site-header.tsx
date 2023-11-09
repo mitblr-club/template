@@ -11,7 +11,7 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         <MainNav />
         <div className="flex flex-1 items-center justify-end space-x-4">
-        <div className="xs:hidden sm:hidden md:hidden lg:block xl:block 2xl:block">
+        <div className="xs:hidden lg:block">
         <IconList />
         </div>
         <ThemeToggle />

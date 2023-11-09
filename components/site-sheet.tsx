@@ -16,12 +16,12 @@ const SiteSheet = () => {
         <Sheet>
 
             <SheetTrigger asChild>
-                <button className="btn btn-primary"><Icons.hamburger className="h-5 w-5 fill-current xs:block sm:block md:block lg:hidden xl:hidden 2xl:hidden" /></button>
+                <button className="btn btn-primary"><Icons.hamburger className="h-5 w-5 fill-current xs:block lg:hidden" /></button>
             </SheetTrigger>
 
              <SheetContent>
 
-                <div className='flex flex-col  items-center gap-28 mt-36'>
+                <div className='flex flex-col items-center gap-28 mt-36'>
                     
                     <div>
                         <SheetClose asChild>
@@ -52,7 +52,7 @@ const SiteSheet = () => {
                         </SheetClose>
                     </div>
                     
-                    <div className="flex flex-col justify-center gap-6">
+                    <div className="flex flex-col items-center gap-7">
 
                         <SheetClose asChild>
                             <Link href="/about"><button className="font-bold text-4xl text-gray-900 dark:text-slate-200">About</button></Link>
