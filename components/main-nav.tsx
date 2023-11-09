@@ -1,53 +1,49 @@
-import * as React from "react"
-import Link from "next/link"
-
-import { NavItem } from "@/types/nav"
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
+import { Icons } from '@/components/icons';
+import { cn } from '@/lib/utils';
+import { NavItem } from '@/types/nav';
+import Link from 'next/link';
+import * as React from 'react';
 
 interface MainNavProps {
-  items?: NavItem[]
+  items?: NavItem[];
 }
 
 const items: NavItem[] = [
   {
-    title: "Home",
-    href: "/home",
+    title: 'Home',
+    href: '/home',
   },
   {
-    title: "About",
-    href: "/about",
+    title: 'About',
+    href: '/about',
   },
   {
-    title: "Services",
-    href: "/services",
+    title: 'Services',
+    href: '/services',
   },
   // Add more items as needed
 ];
 
-
-
 export function MainNav() {
-
   const items: NavItem[] = [
     {
-      title: "About",
-      href: "/about",
+      title: 'About',
+      href: '/about',
     },
     {
-      title: "Events",
-      href: "/events",
+      title: 'Events',
+      href: '/events',
     },
     {
-      title: "Blog",
-      href: "/blog",
+      title: 'Blog',
+      href: '/blog',
     },
     // Add more items as needed
   ];
-  
+
   return (
     <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="flex justify-center items-center">
+      <Link href="/" className="flex items-center justify-center">
         <Icons.CodeX />
       </Link>
       {items?.length ? (
@@ -59,8 +55,8 @@ export function MainNav() {
                   key={index}
                   href={item.href}
                   className={cn(
-                    "flex items-center justify-center text-sm font-medium text-muted-foreground xs:hidden lg:flex",
-                    item.disabled && "cursor-not-allowed opacity-80"
+                    'flex hidden items-center justify-center text-sm font-medium text-muted-foreground lg:flex',
+                    item.disabled && 'cursor-not-allowed opacity-80'
                   )}
                 >
                   {item.title}
@@ -70,5 +66,5 @@ export function MainNav() {
         </nav>
       ) : null}
     </div>
-  )
+  );
 }

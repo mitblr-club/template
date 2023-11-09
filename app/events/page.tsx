@@ -1,10 +1,11 @@
 const Events = () => {
-    return(
-        <div className="flex justify-center items-center min-h-70vh">
-            <h1 className="text-6xl font-black">Events Page</h1>
-        </div>
-    )
+  return (
+    <div className="absolute left-[50%] top-[50%] m-0 translate-x-[-50%] translate-y-[-50%]">
+      <h1 className="block h-full p-4 text-center text-6xl font-bold">
+        Events Page
+      </h1>
+    </div>
+  );
 };
 
 export default Events;
-
