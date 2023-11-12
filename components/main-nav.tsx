@@ -25,29 +25,13 @@ const items: NavItem[] = [
 ];
 
 export function MainNav() {
-  const items: NavItem[] = [
-    {
-      title: 'About',
-      href: '/about',
-    },
-    {
-      title: 'Events',
-      href: '/events',
-    },
-    {
-      title: 'Blog',
-      href: '/blog',
-    },
-    // Add more items as needed
-  ];
-
   return (
-    <div className="flex gap-6 md:gap-10">
-      <Link href="/" className="flex items-center justify-center">
-        <Icons.CodeX />
+    <div className='flex gap-6 md:gap-10'>
+      <Link href='/' className='inline-flex items-center'>
+        <Icons.clubLogo />
       </Link>
       {items?.length ? (
-        <nav className="flex gap-6">
+        <nav className='flex gap-6'>
           {items?.map(
             (item, index) =>
               item.href && (
@@ -55,13 +39,13 @@ export function MainNav() {
                   key={index}
                   href={item.href}
                   className={cn(
-                    'flex hidden items-center justify-center text-sm font-medium text-muted-foreground lg:flex',
-                    item.disabled && 'cursor-not-allowed opacity-80'
+                    'hidden items-center justify-center text-sm font-medium text-muted-foreground lg:flex',
+                    item.disabled && 'cursor-not-allowed opacity-80',
                   )}
                 >
                   {item.title}
                 </Link>
-              )
+              ),
           )}
         </nav>
       ) : null}
