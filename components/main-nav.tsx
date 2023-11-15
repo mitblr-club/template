@@ -1,54 +1,46 @@
-import { Icons } from '@/components/icons';
-import { cn } from '@/lib/utils';
-import { NavItem } from '@/types/nav';
-import Link from 'next/link';
+'use client';
+
+import { siteConfig } from '@/site.config';
+
 import * as React from 'react';
 
-interface MainNavProps {
-  items?: NavItem[];
-}
+import Link from 'next/link';
 
-const items: NavItem[] = [
-  {
-    title: 'Home',
-    href: '/home',
-  },
-  {
-    title: 'About',
-    href: '/about',
-  },
-  {
-    title: 'Services',
-    href: '/services',
-  },
-  // Add more items as needed
-];
+import { Icons } from '@/components/icons';
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from '@/components/ui/navigation-menu';
 
 export function MainNav() {
+  const navLinks = siteConfig.navLinks;
+
   return (
-    <div className='flex gap-6 md:gap-10'>
-      <Link href='/' className='inline-flex items-center'>
-        <Icons.clubLogo />
+    <div className="flex gap-6">
+      <Link href="/" className="inline-flex items-center">
+        <Icons.clubLogo height={36} width={36} />
       </Link>
-      {items?.length ? (
-        <nav className='flex gap-6'>
-          {items?.map(
+      <NavigationMenu className="hidden lg:flex">
+        <NavigationMenuList>
+          {navLinks?.map(
             (item, index) =>
               item.href && (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className={cn(
-                    'hidden items-center justify-center text-sm font-medium text-muted-foreground lg:flex',
-                    item.disabled && 'cursor-not-allowed opacity-80',
-                  )}
-                >
-                  {item.title}
-                </Link>
-              ),
+                <NavigationMenuItem>
+                  <Link key={index} href={item.href} legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      {item.title}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              )
           )}
-        </nav>
-      ) : null}
+        </NavigationMenuList>
+      </NavigationMenu>
     </div>
   );
 }
