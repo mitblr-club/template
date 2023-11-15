@@ -1,9 +1,15 @@
 {
   "endOfLine": "lf",
   "importOrder": [
-    "^@core/(.*)$",
-    "^@server/(.*)$",
-    "^@ui/(.*)$",
+    "^(react/(.*)$)|^(react$)",
+    "^(next/(.*)$)|^(next$)",
+    "^types$",
+    "^@/types/(.*)$",
+    "^@/lib/(.*)$",
+    "^@/hooks/(.*)$",
+    "^@/components/(.*)$",
+    "^@/styles/(.*)$",
+    "^@/app/(.*)$",
     "^[./]"
   ],
   "importOrderSeparation": true,
