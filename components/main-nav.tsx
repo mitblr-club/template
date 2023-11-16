@@ -5,42 +5,40 @@ import { siteConfig } from '@/site.config';
 import * as React from 'react';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import { cn } from '@/lib/utils';
 
 import { Icons } from '@/components/icons';
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
 
 export function MainNav() {
   const navLinks = siteConfig.navLinks;
+  const pathname = usePathname();
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-8">
       <Link href="/" className="inline-flex items-center">
         <Icons.clubLogo height={36} width={36} />
       </Link>
-      <NavigationMenu className="hidden lg:flex">
-        <NavigationMenuList>
-          {navLinks?.map(
-            (item, index) =>
-              item.href && (
-                <NavigationMenuItem>
-                  <Link key={index} href={item.href} legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      {item.title}
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              )
-          )}
-        </NavigationMenuList>
-      </NavigationMenu>
+      <nav className="hidden items-center space-x-6 text-sm font-medium lg:flex">
+        {navLinks?.map(
+          (item, index) =>
+            item.href && (
+              <Link
+                key={index}
+                href={item.href}
+                className={cn(
+                  'transition-colors hover:text-foreground/80',
+                  pathname === item.href
+                    ? 'text-foreground'
+                    : 'text-foreground/60'
+                )}
+              >
+                {item.title}
+              </Link>
+            )
+        )}
+      </nav>
     </div>
   );
 }

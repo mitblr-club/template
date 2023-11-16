@@ -1,6 +1,10 @@
 'use client';
 
+import { siteConfig } from '@/site.config';
+
 import Link from 'next/link';
+
+import { cn } from '@/lib/utils';
 
 import { buttonVariants } from '@/components/ui/button';
 import {
@@ -14,16 +18,21 @@ import IconList from './icon-list';
 import { Icons } from './icons';
 
 const SiteSheet = () => {
+  const navLinks = siteConfig.navLinks;
+
   return (
     <Sheet>
       <SheetTrigger asChild>
         <div
-          className={buttonVariants({
-            size: 'icon',
-            variant: 'ghost',
-          })}
+          className={cn(
+            buttonVariants({
+              size: 'icon',
+              variant: 'ghost',
+            }),
+            'lg:hidden'
+          )}
         >
-          <Icons.hamburger className="block h-5 w-5 lg:hidden" />
+          <Icons.hamburger className="h-5 w-5" />
           <span className="sr-only">Menu</span>
         </div>
       </SheetTrigger>
@@ -39,29 +48,18 @@ const SiteSheet = () => {
           </div>
 
           <div className="flex flex-col items-center gap-7">
-            <SheetClose asChild>
-              <Link href="/about">
-                <button className="text-4xl font-bold text-gray-900 dark:text-slate-200">
-                  About
-                </button>
-              </Link>
-            </SheetClose>
-
-            <SheetClose asChild>
-              <Link href="/events">
-                <button className="text-4xl font-bold text-gray-900 dark:text-slate-200">
-                  Events
-                </button>
-              </Link>
-            </SheetClose>
-
-            <SheetClose asChild>
-              <Link href="/blog">
-                <button className="text-4xl font-bold text-gray-900 dark:text-slate-200">
-                  Blog
-                </button>
-              </Link>
-            </SheetClose>
+            {navLinks?.map(
+              (item, index) =>
+                item.href && (
+                  <SheetClose asChild key={index}>
+                    <Link href={item.href}>
+                      <button className="text-4xl font-bold text-gray-900 dark:text-slate-200">
+                        {item.title}
+                      </button>
+                    </Link>
+                  </SheetClose>
+                )
+            )}
           </div>
 
           <div className="mt-24">
