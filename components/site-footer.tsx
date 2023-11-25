@@ -8,7 +8,8 @@ const SiteFooter = () => {
   return (
     <div className="top-0 z-50 mx-6 flex  flex-col  items-center justify-around gap-2 border-t  bg-background/95 p-1 backdrop-blur supports-[backdrop-filter]:bg-background/60 lg:mx-20 lg:flex-row lg:gap-4 lg:p-3">
       <div className="text-2xl font-bold">
-        mitblr.<span className="text-violet-500">club</span>
+        mitblr.
+        <span className="text-purple-700 dark:text-purple-400">club</span>
       </div>
 
       <div className="flex items-center">

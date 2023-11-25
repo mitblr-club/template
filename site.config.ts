@@ -6,7 +6,7 @@ export const siteConfig = {
   name: 'Club Name',
   institution: 'Manipal Institute of Technology Bengaluru (MIT)',
   address: 'BSF Campus, Yelahanka, MAHE, Bengaluru, Karnataka 560064',
-  description: 'This is a club website template.',
+  description: "Empower your MIT Bengaluru club experience with our centralized platform, seamlessly managing and collaborating on events, blogs, and administration.",
   navLinks: <NavItem[]>[
     {
       title: 'Home',
@@ -31,5 +31,8 @@ export const siteConfig = {
   contactDetails: {
     number: '+91 1234567890',
     email: 'abc.efg@gmail.com'
+  },
+  homePage: {
+    tagline: 'One Ecosystem for all Clubs.',
   }
 };
