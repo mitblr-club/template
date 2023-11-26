@@ -22,7 +22,7 @@ export default function FAQs() {
           <FAQ.Content key={index} value={`item-${index.toString()}`}>
             <FAQ.Question>
               <div className="text-left">
-                {index + 1}.{item.Question}
+                {index + 1}. {item.Question}
               </div>
             </FAQ.Question>
 
