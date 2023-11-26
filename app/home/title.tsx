@@ -16,7 +16,7 @@ export default function Title() {
       <div className="flex justify-between gap-c3 md:gap-c10">
         <div>
           <Link href="/events">
-            <button className="font-jetbrains-mono text-decoration-none transition-box-shadow user-select-none -webkit-user-select-none touch-action-manipulation will-change-box-shadow active:shadow-inner-lg relative box-border inline-flex h-12 cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap rounded-md border-none bg-gradient-to-r from-purple-500 to-purple-700 px-4 text-left text-base font-bold text-white shadow-md transition-transform will-change-transform hover:-translate-y-2 hover:shadow-lg hover:ring-2 hover:ring-blue-500 hover:ring-opacity-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 active:translate-y-2 active:ring-2 active:ring-blue-500 active:ring-opacity-50">
+            <button className="text-decoration-none transition-box-shadow user-select-none -webkit-user-select-none touch-action-manipulation will-change-box-shadow active:shadow-inner-lg relative box-border inline-flex h-12 cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap rounded-md border-none bg-gradient-to-r from-purple-500 to-purple-700 px-4 text-left text-base font-bold text-white shadow-md transition-transform will-change-transform hover:-translate-y-2 hover:shadow-lg hover:ring-2 hover:ring-blue-500 hover:ring-opacity-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 active:translate-y-2 active:ring-2 active:ring-blue-500 active:ring-opacity-50">
               Current Events
             </button>
           </Link>
@@ -24,7 +24,7 @@ export default function Title() {
 
         <div>
           <Link href="/about">
-            <button className="font-jetbrains-mono text-decoration-none transition-box-shadow user-select-none -webkit-user-select-none touch-action-manipulation will-change-box-shadow active:shadow-inner-lg relative box-border inline-flex h-12 cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap rounded-md border-none bg-gray-900 px-4 text-left text-base font-bold text-gray-100 shadow-md transition-transform will-change-transform hover:-translate-y-2 hover:shadow-lg hover:ring-2 hover:ring-gray-300 hover:ring-opacity-50 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 active:translate-y-2 active:ring-2 active:ring-gray-300 active:ring-opacity-50 dark:bg-gray-100 dark:text-gray-700">
+            <button className="text-decoration-none transition-box-shadow user-select-none -webkit-user-select-none touch-action-manipulation will-change-box-shadow active:shadow-inner-lg relative box-border inline-flex h-12 cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap rounded-md border-none bg-gray-900 px-4 text-left text-base font-bold text-gray-100 shadow-md transition-transform will-change-transform hover:-translate-y-2 hover:shadow-lg hover:ring-2 hover:ring-gray-300 hover:ring-opacity-50 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-opacity-50 active:translate-y-2 active:ring-2 active:ring-gray-300 active:ring-opacity-50 dark:bg-gray-100 dark:text-gray-700">
               Learn More
             </button>
           </Link>
