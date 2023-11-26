@@ -17,13 +17,11 @@ import {
 import IconList from './icon-list';
 import { Icons } from './icons';
 
-const SiteSheet = () => {
-  const navLinks = siteConfig.navLinks;
-
+export default function SiteSheet() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <div
+        <button
           className={cn(
             buttonVariants({
               size: 'icon',
@@ -34,7 +32,7 @@ const SiteSheet = () => {
         >
           <Icons.hamburger className="h-5 w-5" />
           <span className="sr-only">Menu</span>
-        </div>
+        </button>
       </SheetTrigger>
 
       <SheetContent>
@@ -48,7 +46,7 @@ const SiteSheet = () => {
           </div>
 
           <div className="flex flex-col items-center gap-7">
-            {navLinks?.map(
+            {siteConfig.navLinks?.map(
               (item, index) =>
                 item.href && (
                   <SheetClose asChild key={index}>
@@ -69,6 +67,4 @@ const SiteSheet = () => {
       </SheetContent>
     </Sheet>
   );
-};
-
-export default SiteSheet;
+}

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Icons } from '@/components/icons';
 import { buttonVariants } from '@/components/ui/button';
 
-const IconList = () => {
+export default function IconList() {
   return (
     <nav className="flex items-center space-x-1">
       <Link
@@ -73,6 +73,4 @@ const IconList = () => {
       </Link>
     </nav>
   );
-};
-
-export default IconList;
+}
