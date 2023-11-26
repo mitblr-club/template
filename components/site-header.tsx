@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { MainNav } from '@/components/main-nav';
 
 import IconList from './icon-list';

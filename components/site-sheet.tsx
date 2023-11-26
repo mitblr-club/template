@@ -36,22 +36,20 @@ export default function SiteSheet() {
       </SheetTrigger>
 
       <SheetContent>
-        <div className="mt-36 flex flex-col items-center gap-28">
-          <div>
-            <SheetClose asChild>
-              <Link href="/">
-                <Icons.clubLogo height={96} width={96} />
-              </Link>
-            </SheetClose>
-          </div>
+        <div className="flex h-full w-full flex-col items-center justify-evenly gap-16 duration-700 animate-in slide-in-from-right-full">
+          <SheetClose asChild>
+            <Link href="/">
+              <Icons.clubLogo height={96} width={96} />
+            </Link>
+          </SheetClose>
 
-          <div className="flex flex-col items-center gap-7">
+          <div className="flex flex-col items-center gap-8">
             {siteConfig.navLinks?.map(
               (item, index) =>
                 item.href && (
                   <SheetClose asChild key={index}>
                     <Link href={item.href}>
-                      <button className="text-4xl font-bold text-gray-900 dark:text-slate-200">
+                      <button className="text-3xl font-bold text-gray-900 dark:text-slate-200">
                         {item.title}
                       </button>
                     </Link>
@@ -60,9 +58,7 @@ export default function SiteSheet() {
             )}
           </div>
 
-          <div className="mt-24">
-            <IconList />
-          </div>
+          <IconList />
         </div>
       </SheetContent>
     </Sheet>
