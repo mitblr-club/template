@@ -1,3 +1,4 @@
+import { Icons } from '@/components/icons';
 import {
   Card,
   CardDescription,
@@ -21,15 +22,16 @@ export default function Info() {
       >
         {data.map((item, index) => (
           <Card
-            className="relative h-fit w-c70 overflow-hidden rounded-lg 
-                shadow-md duration-300 ease-in-out hover:scale-105 hover:shadow-lg md:w-fit"
+            className="relative h-fit w-fit overflow-hidden rounded-lg 
+                shadow-md md:w-fit"
             key={index}
           >
-            <CardHeader>
-              <CardTitle className="text-left text-2xl font-bold">
+            <CardHeader className="flex flex-col gap-2">
+              <div>{item.Icon}</div>
+              <CardTitle className="text-md text-left font-bold">
                 {item.Title}
               </CardTitle>
-              <CardDescription className="text-md text-justify font-medium">
+              <CardDescription className="text-justify text-sm font-medium">
                 {item.Description}
               </CardDescription>
             </CardHeader>

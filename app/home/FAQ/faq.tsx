@@ -12,7 +12,7 @@ import data from './data';
 export default function FAQs() {
   return (
     <div className="mt-c5 px-c3 pb-c3 md:mt-c1 lg:mt-c1 xl:mt-0">
-      <div className="text-md font-bold text-purple-700 dark:text-purple-400">
+      <div className="text-md font-bold text-primary dark:text-primary">
         FAQs
       </div>
       <div className="text-4xl font-medium">Have a Question?</div>
