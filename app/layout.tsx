@@ -2,7 +2,7 @@ import { siteConfig } from '@/site.config';
 
 import { Metadata } from 'next';
 
-import { fontSans } from '@/lib/fonts';
+import { fontMono, fontSans } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 
 import SiteFooter from '@/components/site-footer';
@@ -41,7 +41,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body
           className={cn(
             'relative flex min-h-screen flex-col bg-background font-sans antialiased',
-            fontSans.variable
+            fontSans.variable,
+            fontMono.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

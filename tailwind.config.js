@@ -2,7 +2,7 @@ const { fontFamily } = require("tailwindcss/defaultTheme")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: ["class"], 
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
     screens: {
@@ -36,6 +36,7 @@ module.exports = {
         c1:'1%',
         c3:'3%',
         c5:'5%',
+        c8: '8%',
         c10: '10%',
         c15: '15%',
         c20: '20%',
@@ -50,7 +51,9 @@ module.exports = {
         x15:'15vh',
         c17:'17vh',
         c20:'20vh',
+        c25:'25vh',
         c30:'30vh',
+        c35:'35vh',
         c40:'40vh',
         c45:'45vh',
         c50:'50vh',
