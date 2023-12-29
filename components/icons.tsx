@@ -1,4 +1,5 @@
 import {
+  ArrowLeft,
   Instagram,
   Linkedin,
   type Icon as LucideIcon,
@@ -18,6 +19,7 @@ export const Icons = {
   instagram: Instagram,
   linkedin: Linkedin,
   hamburger: Menu,
+  arrowLeft: ArrowLeft,
   github: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path
