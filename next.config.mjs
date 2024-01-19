@@ -31,7 +31,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: "https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg",
+        hostname: "https://www.shutterstock.com",
       },
     ],
 		domains: [
@@ -41,7 +41,7 @@ const nextConfig = {
 			"s3-us-west-2.amazonaws.com",
 			"lh3.googleusercontent.com",
 			"i.imgur.com",
-      "https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg",
+      "www.shutterstock.com",
 		],
 		formats: ["image/avif", "image/webp"],
 		dangerouslyAllowSVG: true,
