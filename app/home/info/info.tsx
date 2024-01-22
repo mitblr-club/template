@@ -10,7 +10,7 @@ import data from './data';
 
 export default function Info() {
   return (
-    <div className="mt-c20 p-c6 md:mt-c10 lg:mt-c5 xl:mt-c1">
+    <div className="mt-c20 p-c6 md:mt-c10 lg:mt-c5 xl:mt-c1" id='learnMore'>
       <div className="p-c3 text-center text-2xl font-bold md:text-4xl">
         What&apos;s in mitblr.club?<br></br>
         <span className="p-c1 text-lg font-normal">Check out our projects</span>
