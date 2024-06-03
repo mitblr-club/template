@@ -46,7 +46,7 @@ export default async function Blog() {
                 'https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg';
               let department: string = 'Unknown';
 
-              if (post.authors && post.authors.length > 0){
+              if (post.authors && post.authors.length > 0) {
                 for (const key in authors) {
                   if (post.authors[0].id == key) {
                     author = authors[key as keyof typeof authors].fullName;
