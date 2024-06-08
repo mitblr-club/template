@@ -41,9 +41,8 @@ export default async function Blog() {
             })
             .reverse()
             .map((post: any) => {
-              let author: string = 'Anonymous';
-              let pfp: string =
-                'https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg';
+              let author: string = 'Some Guy';
+              let pfp: string = 'https://i.imgur.com/AP6LUqW.png';
               let department: string = 'Unknown';
 
               if (post.authors && post.authors.length > 0) {
@@ -90,28 +89,28 @@ export default async function Blog() {
                     as={`/blog/${post.slug}?author=${author}&pfp=${pfp}&department=${department}`}
                     passHref
                   >
-                    <Card className="flex h-fit w-c80 flex-col bg-card bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg  md:w-c40 xl:w-c25">
+                    <Card className="flex h-fit w-c80 flex-col bg-card shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg  md:w-c40 xl:w-c25">
                       <CardHeader>
                         <div className="text-md font-light dark:font-extralight">
                           {formatDate(post.date)}
                         </div>
-                        <CardTitle className="flex flex-col justify-center">
-                          <div className="flex text-2xl font-bold">
+                        <CardTitle className="flex w-full flex-col justify-center">
+                          <div className="w-full text-xl font-bold">
                             {post.title}
-                            <span className="invisible">{hiddenTitleText}</span>
+                            <span className="hidden">{hiddenTitleText}</span>
                           </div>
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <div className="h-fit overflow-clip text-sm font-medium dark:font-light">
+                        <div className="h-fit text-clip text-sm font-medium dark:font-light">
                           {post.description}{' '}
                           <span className="invisible">{hiddenDescText}</span>
                         </div>
-                        <div className="px-1 pb-0 pt-2">
+                        <div className="pb-0 pr-1 pt-2">
                           {post.tags?.map((tag: any) => (
                             <span
                               key={tag}
-                              className="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                              className="align-center mb-2 mr-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
                             >
                               {tag}
                             </span>
@@ -121,18 +120,14 @@ export default async function Blog() {
                       <CardFooter className="flex gap-3">
                         <Image
                           alt={author}
-                          className="mr-4 rounded-full"
+                          className="mr-1 rounded-full"
                           src={pfp}
                           width={40}
                           height={40}
                         />
                         <div className="flex flex-col">
-                          <div className="text-md font-semibold dark:font-medium">
-                            {author}
-                          </div>
-                          <div className="text-md font-medium dark:font-light">
-                            {department}
-                          </div>
+                          <div className="text-md font-bold">{author}</div>
+                          <div className="text-md">{department}</div>
                         </div>
                       </CardFooter>
                     </Card>

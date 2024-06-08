@@ -31,7 +31,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'https://www.shutterstock.com',
+        hostname: 'www.shutterstock.com',
       },
     ],
     domains: [
