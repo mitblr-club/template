@@ -8,7 +8,7 @@ export const siteConfig = {
   description:
     'Empower your MIT Bengaluru club experience with our centralized platform, seamlessly managing and collaborating on events, blogs, and administration.',
   eventsTableId: 'df0bbd9604a846468e6aaf7f41042c1c',
-  blogTableId: '4388cd358b214e539f9c5ea5f941ad4e',
+  blogTableId: 'd8caac170c6243a18228b8467ec1f41e',
   navLinks: [
     {
       title: 'Home',
