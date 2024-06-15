@@ -24,10 +24,10 @@ export const siteConfig = {
     },
   ] satisfies NavItem[],
   mediaLinks: {
-    instagram: 'https://www.instagram.com/codex.mitb/',
-    linkedin: 'https://in.linkedin.com/company/codexclub',
-    github: 'https://github.com/CodeX-MIT-BLR',
-    twitter: 'https://twitter.com/CodeX_MITB',
+    instagram: 'https://www.instagram.com/',
+    linkedin: 'https://in.linkedin.com/',
+    github: 'https://github.com/',
+    twitter: 'https://twitter.com/',
     institute: 'https://manipal.edu/mitblr.html',
   },
   contactDetails: {

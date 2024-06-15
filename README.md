@@ -1,22 +1,84 @@
-# next-template
+![](https://img.shields.io/github/v/release/mitblr-club/template)
+![](https://img.shields.io/github/forks/mitblr-club/template?style=flat)
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
+# mitblr.club template
 
-## Usage
+This template is a fully responsive website built with [Next.JS](https://nextjs.org), [TailwindCSS](https://tailwindcss.com), and [shadcn/ui](https://ui.shadcn.com).
 
-```bash
-npx create-next-app -e https://github.com/shadcn/next-template
-```
+## Configuration
 
-## Features
+1.  All core config. values of the template exist in the root at [`site.config.ts`](/blob/main/site.config.ts).
 
-- Next.js 13 App Directory
-- Radix UI Primitives
-- Tailwind CSS
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Tailwind CSS class sorting, merging and linting.
+    ```ts
+    export const siteConfig = {
+      name: '...',
+      institution: '...',
+      description: '...',
+      eventsTableId: '...',
+      blogTableId: '...',
+      navLinks: [
+        {
+          title: 'Home',
+          href: '/',
+        },
+        {
+          title: 'Blog',
+          href: '/blog',
+        },
+        {
+          title: 'Events',
+          href: '/events',
+        },
+      ] satisfies NavItem[],
+      mediaLinks: {
+        instagram: '...',
+        linkedin: '...',
+        github: '...',
+        twitter: '...',
+        institute: '...',
+      },
+      contactDetails: {
+        number: '+91 1234567890',
+        email: 'abc.efg@gmail.com',
+      },
+      homePage: {
+        tagline: '...',
+      },
+    };
+    ```
 
-## License
+    a. The Notion Database IDs are provided to `eventsTableId` and `blogTableId`.
 
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+    b. The social media links are provided under `mediaLinks: {...}`.
+
+    c. These same variables contribute to the metadata of the site.
+
+2.  The homepage view has its files located at [`/app/home`](/tree/main/app/home), and has its data stored in `data.ts`/`data.tsx` files that can be edited directly.
+
+## Development
+
+1. To install packages, run:
+
+   ```bash
+   npm install
+   ```
+
+   You can then make changes as necessary in order to be committed.
+
+2. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Lint and format changes using ESLint/Prettier.
+
+   ```bash
+   # Linting
+   npm run lint:fix
+
+   # Formatting
+   npm run format:write
+   ```
+
+Now, you can create a pull request to commit changes to the repository.
