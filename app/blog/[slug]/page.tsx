@@ -4,15 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { formatDate } from '@/lib/formatDate';
+import { getBlogPosts } from '@/lib/getBlogPosts';
 
 import { Icons } from '@/components/icons';
 
 import '@/styles/styles.css';
 
-import { getPosts } from '../page';
-
 async function getBlocks({ params: { slug } }: { params: { slug: any } }) {
-  const posts = await getPosts();
+  const posts = await getBlogPosts();
 
   const post = posts.find((t: any) => t.slug === slug);
 
@@ -25,12 +24,6 @@ async function getBlocks({ params: { slug } }: { params: { slug: any } }) {
   };
 }
 
-async function generateStaticParams() {
-  const posts = await getPosts();
-  const paths = posts.map((row: any) => `/${row.slug}`);
-  return paths;
-}
-
 export default async function BlogPost({
   params,
   searchParams,
@@ -38,8 +31,6 @@ export default async function BlogPost({
   params: { slug: string };
   searchParams: { author: any; pfp: any; department: any };
 }) {
-  const paths = await generateStaticParams();
-
   const { author } = searchParams;
   const { pfp } = searchParams;
   const { department } = searchParams;

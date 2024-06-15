@@ -1,10 +1,10 @@
 import authors from '@/data/authors';
-import { siteConfig } from '@/site.config';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { formatDate } from '@/lib/formatDate';
+import { getBlogPosts } from '@/lib/getBlogPosts';
 
 import {
   Card,
@@ -14,17 +14,8 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-export async function getPosts() {
-  const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/${siteConfig.blogTableId}`,
-    { next: { revalidate: 60 } }
-  );
-  const posts = await res.json();
-  return posts;
-}
-
 export default async function Blog() {
-  const posts = await getPosts();
+  const posts = await getBlogPosts();
 
   const descLength: number = 40;
   const titleLength: number = 40;

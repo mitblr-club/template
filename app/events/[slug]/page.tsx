@@ -2,14 +2,14 @@ import { NotionRenderer } from 'react-notion';
 
 import Link from 'next/link';
 
+import { getEventPosts } from '@/lib/getEventPosts';
+
 import { Icons } from '@/components/icons';
 
 import '@/styles/styles.css';
 
-import { getEvents } from '../page';
-
 async function getBlocks({ params: { slug } }: { params: { slug: any } }) {
-  const events = await getEvents();
+  const events = await getEventPosts();
 
   const event = events.find((t: any) => t.slug === slug);
 
@@ -22,21 +22,12 @@ async function getBlocks({ params: { slug } }: { params: { slug: any } }) {
   };
 }
 
-async function generateStaticParams() {
-  const events = await getEvents();
-  const paths = events.map((row: any) => `/${row.slug}`);
-  return paths;
-}
-
 export default async function EventPost({
   params,
 }: {
   params: { slug: string };
 }) {
-  const paths = await generateStaticParams();
-
   const { slug } = params;
-
   const { event, blocks } = await getBlocks({ params: { slug: slug } });
 
   return (

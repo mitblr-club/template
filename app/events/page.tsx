@@ -1,19 +1,10 @@
-import { siteConfig } from '@/site.config';
+import { getEventPosts } from '@/lib/getEventPosts';
 
 import { CurrentEvents } from './eventType/currentEvents';
 import PastEvents from './eventType/pastEvents';
 
-export async function getEvents() {
-  const res = await fetch(
-    `https://notion-api.splitbee.io/v1/table/${siteConfig.eventsTableId}`,
-    { next: { revalidate: 60 } }
-  );
-  const events = await res.json();
-  return events;
-}
-
 export default async function Events() {
-  const events = await getEvents();
+  const events = await getEventPosts();
 
   return (
     <div className="mt-c20 px-0 pb-c3 md:mt-c10 xl:mt-c5 xl:px-c8">

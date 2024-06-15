@@ -10,8 +10,6 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-import { getEvents } from '../page';
-
 export default function PastEvents({ events }: any) {
   const pastEvents = events
     .filter((event: any) => (event.joinable ? null : event))
@@ -34,7 +32,7 @@ export default function PastEvents({ events }: any) {
           return (
             <div key={index} className="mt-c5">
               <Link href="/events/[slug]" as={`/events/${event.slug}`} passHref>
-                <Card className="flex h-fit w-c80 flex-col bg-card bg-opacity-70 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-opacity-100 hover:shadow-lg md:w-c40 xl:w-c25">
+                <Card className="flex h-fit w-c80 flex-col bg-card/70 shadow-md duration-300 ease-in-out hover:scale-105 hover:bg-card/100 hover:shadow-lg md:w-c40 xl:w-c25">
                   <CardHeader>
                     <div className="text-md font-light dark:font-extralight">
                       {formatDate(event.date)}
@@ -46,7 +44,7 @@ export default function PastEvents({ events }: any) {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="h-fit overflow-clip text-sm font-medium dark:font-light">
+                    <div className="h-fit text-clip text-sm font-medium dark:font-light">
                       This event is over
                     </div>
                   </CardContent>
