@@ -7,7 +7,7 @@ This template is a fully responsive website built with [Next.JS](https://nextjs.
 
 ## Configuration
 
-1.  All core config. values of the template exist in the root at [`site.config.ts`](/blob/main/site.config.ts).
+1.  All core config. values of the template exist in the root at [`site.config.ts`](/site.config.ts).
 
     ```ts
     export const siteConfig = {
@@ -53,7 +53,7 @@ This template is a fully responsive website built with [Next.JS](https://nextjs.
 
     c. These same variables contribute to the metadata of the site.
 
-2.  The homepage view has its files located at [`/app/home`](/tree/main/app/home), and has its data stored in `data.ts`/`data.tsx` files that can be edited directly.
+2.  The homepage view has its files located at [`/app/home`](/app/home), and has its data stored in `data.ts`/`data.tsx` files that can be edited directly.
 
 ## Development
 
