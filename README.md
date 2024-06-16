@@ -1,7 +1,7 @@
+# mitblr.club template
+
 ![](https://img.shields.io/github/v/release/mitblr-club/template)
 ![](https://img.shields.io/github/forks/mitblr-club/template?style=flat)
-
-# mitblr.club template
 
 This template is a fully responsive website built with [Next.JS](https://nextjs.org), [TailwindCSS](https://tailwindcss.com), and [shadcn/ui](https://ui.shadcn.com).
 
