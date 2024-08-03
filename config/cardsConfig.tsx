@@ -1,6 +1,6 @@
 import { Icons } from '@/components/icons';
 
-const data = [
+const cardsConfig = [
   {
     Title: 'Web Template',
     Description:
@@ -27,4 +27,4 @@ const data = [
   },
 ];
 
-export default data;
+export default cardsConfig;
