@@ -1,5 +1,7 @@
 import { siteConfig } from '@/config/site';
 
+import { homeData } from '@/config/home';
+
 import { Metadata, Viewport } from 'next';
 
 import { fontMono, fontSans } from '@/lib/fonts';
@@ -17,7 +19,7 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: homeData.description,
   icons: {
     icon: '/favicon.png',
   },
