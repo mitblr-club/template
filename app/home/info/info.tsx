@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-import cardsConfig from '@/config/cardsConfig';
+import cardsConfig from '@/config/cards';
 
 export default function Info() {
   return (

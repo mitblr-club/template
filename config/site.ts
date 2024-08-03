@@ -5,6 +5,7 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: 'Club Name',
   institution: 'Manipal Institute of Technology Bengaluru (MIT)',
+  description: "Site metdata description!",
   eventsTableId: 'df0bbd9604a846468e6aaf7f41042c1c',
   blogTableId: 'd8caac170c6243a18228b8467ec1f41e',
   navLinks: [
