@@ -1,16 +1,16 @@
-import { siteConfig } from '@/site.config';
+import { homeData } from '@/config/home';
 
 import Link from 'next/link';
 
 export default function Title() {
-  return (
+  return ( 
     <div className="mt-c25 flex h-c60 flex-col items-center justify-between overflow-x-hidden md:mt-c15 md:h-c30 lg:h-c30 xl:mt-c5 xl:h-c45">
       <div className="px-3 text-center text-5xl font-bold duration-1000 animate-in fade-in-0 md:text-6xl xl:text-7xl">
-        {siteConfig.homePage.tagline}
+        {homeData.tagline}
       </div>
 
       <div className="px-c10 text-center sm:text-xs md:text-base lg:text-xl">
-        {siteConfig.description}
+        {homeData.description}
       </div>
 
       <div className="flex justify-between gap-c3 md:gap-c10">

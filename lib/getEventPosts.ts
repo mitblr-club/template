@@ -1,6 +1,6 @@
 'use server';
 
-import { siteConfig } from '@/site.config';
+import { siteConfig } from '@/config/site';
 
 export async function getEventPosts() {
   const res = await fetch(
