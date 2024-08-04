@@ -6,8 +6,8 @@ export const siteConfig = {
   name: 'Club Name',
   institution: 'Manipal Institute of Technology Bengaluru (MIT)',
   description: "Site metdata description!",
-  eventsTableId: 'df0bbd9604a846468e6aaf7f41042c1c',
-  blogTableId: 'd8caac170c6243a18228b8467ec1f41e',
+  eventsTableId: 'f348a5f5bb934f87bbe2f16c10521cb5',
+  blogTableId: 'b161b7c3fb8c415cac57781069d8b4fb',
   navLinks: [
     {
       title: 'Home',

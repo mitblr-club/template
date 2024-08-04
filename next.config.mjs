@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  optimizeFonts: true,
+  optimizeFonts: false,
   staticPageGenerationTimeout: 300,
   images: {
     remotePatterns: [

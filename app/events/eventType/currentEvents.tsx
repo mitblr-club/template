@@ -95,10 +95,10 @@ export function CurrentEvents({ events }: any) {
                         </div>
                         <div className="flex flex-col gap-2 text-right">
                           <div className="text-sm font-light dark:font-extralight">
-                            Time: Add time column
+                            Time: {event.time}
                           </div>
                           <div className="text-sm font-light dark:font-extralight">
-                            Venue: Add venue column
+                            Venue: {event.venue}
                           </div>
                         </div>
                       </div>
