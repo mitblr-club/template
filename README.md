@@ -7,7 +7,7 @@ This template is a fully responsive website built with [Next.JS](https://nextjs.
 
 ## Configuration
 
-1.  All core config. values of the template exist at [`/config/site.ts`](/config/site.ts). For convenience, we recommend using the Config Generator available at [https://mitblr.club/generators/config](https://mitblr.club/generators/config), although you can also edit these files directly.
+1.  All core config. values of the template exist at [`config/site.ts`](/config/site.ts). For convenience, we recommend using the Config Generator available at [https://mitblr.club/generators/config](https://mitblr.club/generators/config), although you can also edit these files directly.
 
     ```ts
     export const siteConfig = {
@@ -41,9 +41,6 @@ This template is a fully responsive website built with [Next.JS](https://nextjs.
         number: '+91 1234567890',
         email: 'abc.efg@gmail.com',
       },
-      homePage: {
-        tagline: '...',
-      },
     };
     ```
 
@@ -53,11 +50,11 @@ This template is a fully responsive website built with [Next.JS](https://nextjs.
 
     c. These same variables contribute to the metadata of the site.
 
-4. The homepage view is organized into two sets of files within the [`/config/`](/config/) directory:
+2. The homepage view is organized into two sets of files within the [`config/`](/config/) directory:
 
-   a. The title, description, and FAQs are stored in the `home.ts`/`home.tsx` files. For convenience, we recommend using the Config Generator available at [https://mitblr.club/generators/home](https://mitblr.club/generators/home), although you can also edit these files directly.
+   a. The title, description, and FAQs are stored in the `home.ts` files. For convenience, we recommend using the Config Generator available at [https://mitblr.club/generators/home](https://mitblr.club/generators/home), although you can also edit these files directly.
 
-   b. The cards displayed on the page are stored in the `cards.ts`/`cards.tsx` files. Similarly, you can use the Config Generator at [https://mitblr.club/generators/cards](https://mitblr.club/generators/cards) for easier configuration, or make direct edits to the files if preferred.
+   b. The cards displayed on the page are stored in the `cards.tsx` files. Similarly, you can use the Config Generator at [https://mitblr.club/generators/cards](https://mitblr.club/generators/cards) for easier configuration, or make direct edits to the files if preferred.
 
 ## Development
 
