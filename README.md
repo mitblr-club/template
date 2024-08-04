@@ -7,7 +7,7 @@ This template is a fully responsive website built with [Next.JS](https://nextjs.
 
 ## Configuration
 
-1.  All core config. values of the template exist in the root at [`site.config.ts`](/site.config.ts).
+1.  All core config. values of the template exist at [`/config/site.ts`](/config/site.ts). For convenience, we recommend using the Config Generator available at [https://mitblr.club/generators/config](https://mitblr.club/generators/config), although you can also edit these files directly.
 
     ```ts
     export const siteConfig = {
@@ -53,7 +53,11 @@ This template is a fully responsive website built with [Next.JS](https://nextjs.
 
     c. These same variables contribute to the metadata of the site.
 
-2.  The homepage view has its files located at [`/app/home`](/app/home), and has its data stored in `data.ts`/`data.tsx` files that can be edited directly.
+4. The homepage view is organized into two sets of files within the [`/config/`](/config/) directory:
+
+   a. The title, description, and FAQs are stored in the `home.ts`/`home.tsx` files. For convenience, we recommend using the Config Generator available at [https://mitblr.club/generators/home](https://mitblr.club/generators/home), although you can also edit these files directly.
+
+   b. The cards displayed on the page are stored in the `cards.ts`/`cards.tsx` files. Similarly, you can use the Config Generator at [https://mitblr.club/generators/cards](https://mitblr.club/generators/cards) for easier configuration, or make direct edits to the files if preferred.
 
 ## Development
 
