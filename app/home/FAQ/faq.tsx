@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-import { homeData } from '@/config/home';
+import { homeConfig } from '@/config/home';
 
 export default function FAQs() {
   return (
@@ -18,7 +18,7 @@ export default function FAQs() {
       <div className="text-4xl font-medium">Have a Question?</div>
 
       <Accordion type="single" collapsible className="w-full px-c3 py-c1">
-        {homeData.FAQConfig.map((item, index) => (
+        {homeConfig.FAQConfig.map((item, index) => (
           <FAQ.Content key={index} value={`item-${index.toString()}`}>
             <FAQ.Question>
               <div className="text-left">

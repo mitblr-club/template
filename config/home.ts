@@ -1,4 +1,6 @@
-export const homeData = {
+import { FAQItem } from "@/types/faq-item"
+
+export const homeConfig = {
     tagline: 'One Ecosystem for all Clubs.',
     description:
     'Empower your MIT Bengaluru club experience with our centralized platform, seamlessly managing and collaborating on events, blogs, and administration.',
@@ -23,5 +25,5 @@ export const homeData = {
           answer:
             'Yes, mitblr.club has multiple apps designed for both Android and iOS. You can find the links to the apps on the home page.',
         },
-      ],
+      ] satisfies FAQItem[],
 }
