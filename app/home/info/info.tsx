@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-import data from './data';
+import cardsConfig from '@/config/cards';
 
 export default function Info() {
   return (
@@ -20,7 +20,7 @@ export default function Info() {
         className="flex flex-col items-center justify-center gap-c3vh 
                 lg:grid lg:grid-cols-2 lg:gap-c3vh"
       >
-        {data.map((item, index) => (
+        {cardsConfig.map((item, index) => (
           <Card
             className="relative h-fit w-fit overflow-hidden rounded-lg 
                 shadow-md md:w-fit"

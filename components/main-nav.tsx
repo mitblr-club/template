@@ -1,6 +1,6 @@
 'use client';
 
-import { siteConfig } from '@/site.config';
+import { siteConfig } from '@/config/site';
 
 import React from 'react';
 

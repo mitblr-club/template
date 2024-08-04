@@ -1,6 +1,6 @@
 'use server';
 
-import { siteConfig } from '@/site.config';
+import { siteConfig } from '@/config/site';
 
 export async function getBlogPosts() {
   const res = await fetch(
