@@ -1,8 +1,9 @@
 import { homeConfig } from '@/config/home';
+
 import Link from 'next/link';
 
 export default function Title() {
-  return ( 
+  return (
     <div className="mt-c25 flex h-c60 flex-col items-center justify-between overflow-x-hidden md:mt-c15 md:h-c30 lg:h-c30 xl:mt-c5 xl:h-c45">
       <div className="px-3 text-center text-5xl font-bold duration-1000 animate-in fade-in-0 md:text-6xl xl:text-7xl">
         {homeConfig.tagline}

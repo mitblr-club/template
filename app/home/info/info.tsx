@@ -1,3 +1,5 @@
+import cardsConfig from '@/config/cards';
+
 import { Icons } from '@/components/icons';
 import {
   Card,
@@ -5,8 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-
-import cardsConfig from '@/config/cards';
 
 export default function Info() {
   return (

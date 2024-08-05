@@ -50,11 +50,11 @@ This template is a fully responsive website built with [Next.JS](https://nextjs.
 
     c. These same variables contribute to the metadata of the site.
 
-2. The homepage view is organized into two sets of files within the [`config/`](/config/) directory:
+2.  The homepage view is organized into two sets of files within the [`config/`](/config/) directory:
 
-   a. The title, description, and FAQs are stored in the `home.ts` files. For convenience, we recommend using the Config Generator available at [https://mitblr.club/generators/home](https://mitblr.club/generators/home), although you can also edit these files directly.
+    a. The title, description, and FAQs are stored in the `home.ts` files. For convenience, we recommend using the Config Generator available at [https://mitblr.club/generators/home](https://mitblr.club/generators/home), although you can also edit these files directly.
 
-   b. The cards displayed on the page are stored in the `cards.tsx` files. Similarly, you can use the Config Generator at [https://mitblr.club/generators/cards](https://mitblr.club/generators/cards) for easier configuration, or make direct edits to the files if preferred.
+    b. The cards displayed on the page are stored in the `cards.tsx` files. Similarly, you can use the Config Generator at [https://mitblr.club/generators/cards](https://mitblr.club/generators/cards) for easier configuration, or make direct edits to the files if preferred.
 
 ## Development
 

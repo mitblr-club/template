@@ -1,3 +1,5 @@
+import { homeConfig } from '@/config/home';
+
 import { ReactNode } from 'react';
 
 import {
@@ -6,8 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-
-import { homeConfig } from '@/config/home';
 
 export default function FAQs() {
   return (
