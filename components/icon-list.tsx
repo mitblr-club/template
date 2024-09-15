@@ -2,6 +2,8 @@ import { siteConfig } from '@/config/site';
 
 import Link from 'next/link';
 
+import { cn } from '@/lib/utils';
+
 import { Icons } from '@/components/icons';
 import { buttonVariants } from '@/components/ui/button';
 
@@ -14,10 +16,13 @@ export default function IconList() {
         rel="noreferrer"
       >
         <div
-          className={buttonVariants({
-            size: 'icon',
-            variant: 'ghost',
-          })}
+          className={cn(
+            buttonVariants({
+              size: 'icon',
+              variant: 'ghost',
+            }),
+            'hover:stroke-primary-foreground'
+          )}
         >
           <Icons.instagram className="h-5 w-5" />
           <span className="sr-only">Instagram</span>
@@ -30,10 +35,13 @@ export default function IconList() {
         rel="noreferrer"
       >
         <div
-          className={buttonVariants({
-            size: 'icon',
-            variant: 'ghost',
-          })}
+          className={cn(
+            buttonVariants({
+              size: 'icon',
+              variant: 'ghost',
+            }),
+            'hover:stroke-primary-foreground'
+          )}
         >
           <Icons.twitter className="h-5 w-5" />
           <span className="sr-only">Twitter</span>
@@ -46,10 +54,13 @@ export default function IconList() {
         rel="noreferrer"
       >
         <div
-          className={buttonVariants({
-            size: 'icon',
-            variant: 'ghost',
-          })}
+          className={cn(
+            buttonVariants({
+              size: 'icon',
+              variant: 'ghost',
+            }),
+            'hover:stroke-primary-foreground'
+          )}
         >
           <Icons.linkedin className="h-5 w-5 fill-current" />
           <span className="sr-only">LinkedIn</span>
@@ -62,10 +73,13 @@ export default function IconList() {
         rel="noreferrer"
       >
         <div
-          className={buttonVariants({
-            size: 'icon',
-            variant: 'ghost',
-          })}
+          className={cn(
+            buttonVariants({
+              size: 'icon',
+              variant: 'ghost',
+            }),
+            'hover:stroke-primary-foreground'
+          )}
         >
           <Icons.github className="h-5 w-5" />
           <span className="sr-only">GitHub</span>
