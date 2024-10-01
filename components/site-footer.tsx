@@ -15,6 +15,7 @@ export default function SiteFooter() {
           <Link
             href={siteConfig.mediaLinks.institute}
             className="text-sm font-medium transition-colors hover:text-foreground/80"
+            target="_blank"
           >
             {siteConfig.institution}
           </Link>
